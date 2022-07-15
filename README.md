@@ -46,10 +46,6 @@ message | String  | Message about Success or Failure or Invalid Data
 
 `AMOUNT`, `UPI_ID`, `TRANSACTION_ID`, `CURRENCY`, `MERCHANT_CATEGORY_CODE`, `PAYEE_NAME`
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
 ## License
 
 MIT
