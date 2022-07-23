@@ -1,6 +1,6 @@
 {
   "name": "rn-upi-pay",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A native library for UPI payment is currently available only for Android devices.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
