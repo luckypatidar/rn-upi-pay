@@ -1,25 +1,26 @@
 # rn-upi-pay
-A react-native library for UPI payments
+A react-native library for UPI payments for android device
 ## Installation
 
 ```sh
 npm install rn-upi-pay 
 or yarn add rn-upi-pay
 ```
+##Demo
 
+![](https://media.giphy.com/media/Ei4GF0b0tpkxLQEhwR/giphy.gif)
 ## Usage
 
 ```js
 import { initiateTransaction } from "rn-upi-pay";
 
-// ...
 
 initiateTransaction({
+      payeeName: 'Name of the Payee', // Required 
       upi: 'upi_id',  // Required
       transactionId: 'transaction_id',  // Required
       currency: 'INR',   //(Required)
-      merchantCategoryCode: 'Merchant Category Code',  // (Required)
-      payeeName: 'Name of the Payee', // Required 
+      merchantCategoryCode: 'Merchant Category Code',  // (Required)      
       amount: '1',  // Required
       note: 'test', // (Optional)
     })
@@ -33,18 +34,22 @@ initiateTransaction({
 
 ### Response Props
 
-Key | Value | Description  
---- | --- | ---
-paymentStatus | -1 or 1 or 0 | ```-1``` - DATA MISSING OR INVALID, ```1``` - SUCCESS, ```0``` - FAILURE
-txnId | String  | Transaction ID return from the Payment App ( for Backend Process ) only return when the ```paymentStatus``` is ```1``` or ```0```
-txnRef |String | Transaction Reference ID return from the Payment App ( only return when the ```paymentStatus``` is ```1``` or ```0``` )
-missingData | [Missing Data](#missing-data) | Data which is missing or Invalid ( only return when the ```paymentStatus``` is ```-1``` )
-responseCode | String | Code return from the Payment App ( only return when the ```paymentStatus``` is ```1``` or ```0``` )
-message | String  | Message about Success or Failure or Invalid Data
+```js
 
-#### `Missing Data`
+- `paymentStatus` - Return -1(Data Missing or Invalid), 1(Success) or 0(Failure).
+- `txnId` - It returns from the payment app when the payment status is 1 or 0.
+- `txnRef` - It returns from the payment app when the payment status is 1 or 0.
+- `missingData` - Data is either missing or invalid(-1).
+- `responseCode` - 1(for success), 0(for failure) or -1(Invalid Data).
+- `message` - About the success or failure.
+```
 
-`AMOUNT`, `UPI_ID`, `TRANSACTION_ID`, `CURRENCY`, `MERCHANT_CATEGORY_CODE`, `PAYEE_NAME`
+
+### Missing Data
+
+```js
+`Amount`, `UPI id`, `transaction id`, `Merchant code`, `Currency`, `Payee name`
+```
 
 ## License
 
@@ -53,3 +58,6 @@ MIT
 ---
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+
+## Contribution Guide
+

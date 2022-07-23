@@ -1,7 +1,7 @@
 {
   "name": "rn-upi-pay",
   "version": "0.1.0",
-  "description": "test",
+  "description": "A native library for UPI payment is currently available only for Android devices.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -33,7 +33,13 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "UPI Payment",
+    "UPI",
+    "PhonePe",
+    "Gpay",
+    "Paytm",
+    "Bhim"
   ],
  
   "publishConfig": {
@@ -61,6 +67,13 @@
     "release-it": "^15.0.0",
     "typescript": "^4.5.2"
   },
+  "repository": "https://github.com/luckypatidar/rn-upi-pay",
+  "author": "luckypatidar <shubhampatidar904@gmail.com> (https://github.com/luckypatidar)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luckypatidar/rn-upi-pay/issues"
+  },
+  "homepage": "https://github.com/luckypatidar/rn-upi-pay#readme",
   "resolutions": {
     "@types/react": "17.0.21"
   },
